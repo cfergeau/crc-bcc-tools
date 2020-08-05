@@ -2,8 +2,8 @@ PASSWORD=''
 
 KERNEL_VERSION=$(ssh crc uname -r)
 KERNEL_VERSION="latest"
-REGISTRY="docker-registry.upshift.redhat.com"
-BCC_IMAGE="$REGISTRY/cfergeau/bcc-tcpconnect:$KERNEL_VERSION"
+REGISTRY="quay.io"
+BCC_IMAGE="$REGISTRY/teuf/bcc-tcpconnect:$KERNEL_VERSION"
 
 #ssh crc sudo podman login --tls-verify=false  -p $PASSWORD -u unused $REGISTRY
 ssh crc sudo podman pull --tls-verify=false $BCC_IMAGE
